@@ -3,285 +3,557 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AZHAR ALI</title>
+    <meta name="description" content="Azhar Ali — AI/ML Engineer specializing in Agentic AI Systems, Deep Learning, and Large Language Models. 4+ years of experience delivering 100+ AI/ML projects.">
+    <title>Azhar Ali — AI/ML Engineer & Agentic AI Specialist</title>
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo"><img src="./images/Logo.png" alt="Azhar" style="width: 150px; height: auto;"></a>
+    <!-- Particle Canvas Background -->
+    <canvas id="particles-canvas"></canvas>
 
-        <nav class="navbar">
-            <a href="#home" style="--i:1" class="active">Home</a>
-            <a href="#about" style="--i:2">About</a>
-            <a href="#services" style="--i:3">Skills</a>
-            <a href="#skills" style="--i:4">Portfolio</a>
-            <a href="#contact" style="--i:5">Contact</a>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Header / Navbar -->
+    <header class="header" id="header">
+        <a href="#home" class="logo">
+            <img src="./images/Logo.png" alt="Azhar Ali Logo" style="width: 130px; height: auto;">
+        </a>
+        <nav class="navbar" id="navbar">
+            <a href="#home" class="nav-link active" data-section="home">Home</a>
+            <a href="#about" class="nav-link" data-section="about">About</a>
+            <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+            <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+            <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+            <a href="#contact" class="nav-link" data-section="contact">Contact</a>
         </nav>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
+
+    <!-- ==================== HOME ==================== -->
     <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hello, It's Me</h3>
-            <h1>Azhar Ali</h1>
-            <h3>And I'm a <span class="text"></span></h3>
-            <p>I'm a Computer Scientist. <br/>
-                My first exposure to professional life through internship has benefited me mostly in
-                strengthening my personal skills. I have developed a positive attitude and a strong
-                sense of responsibility being innovative , resourceful, open and responsive to change. It has
-                created in me an interest in lifelong learning.
-            </p>
-            <div class="home-scl">
-                <a href="#" style="--i:7"><i class='bx bxl-facebook'></i></a>
-                <a href="#" style="--i:8"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" style="--i:9"><i class='bx bxl-whatsapp' ></i></a>
-                <a href="#https://www.linkedin.com/in/azhar-ali-ibaian" style="--i:10"><i class='bx bxl-linkedin' ></i></a>
-            </div>
-            <a href="#" class="btn-box">More About Me</a>
-        </div>
-        <span class="home-imgHover"></span>
-    </section>
-
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="./images/About.png" alt="Avatar">
-        </div>
-        <div class="about-text">
-            <h2>About <span>Me</span></h2>
-            <h4>ML/AI Engineer & Spring Boot Developer!</h4>
+        <div class="home-content reveal">
+            <span class="greeting">Hello, I'm</span>
+            <h1 class="glitch-text" data-text="Azhar Ali">Azhar Ali</h1>
+            <h3>And I'm a <span class="typed-text"></span></h3>
             <p>
-                I'm Azhar Ali & I'm from Pakistan. I'm an engineering graduate from Sukkur IBA University College specialized in Computer Science. I've worked hard in my education & maintained a skills.
-                Along with my degree I've completed Java, Spring Boot, Machine Learning, AI, Data Science and Full Stack Courses online.Now I'm ready to apply my knowledge into practice.I've  had a lot of exposure to the software field.
-                My Goal is to build a successfull career as a Data Engineer.Moving forward in my career I hope to expand my experience across different industries.
-                I'm attentive listener and effective oral communication skill.
-                That's all about my self.
-                <!-- My first exposure to professional life through internship has benefited me mostly in
-                strengthening my personal skills. I have developed a positive attitude and a strong
-                sense of responsibility being innovative , resourceful, open and responsive to change. It has
-                created in me an interest in lifelong learning.
-                I'm attentive listener and effective oral communication skill -->
+                AI/ML Engineer specializing in <strong>Agentic AI Systems</strong>, <strong>Deep Learning</strong>,
+                and <strong>Large Language Models</strong>. 4+ years of experience delivering
+                <strong>100+ AI/ML projects</strong> with 85–96% accuracy in real-world applications.
             </p>
-            <a href="#" class="btn-box">More About Me</a>
-        </div>
-    </section>
-
-    <section>
-        <div class="services" id="services">
-            <div class="container">
-                <h1 class="sub-title">My <span>Skiils</span></h1>
-                <div class="services-list">
-                    <div>
-                        <i class='bx bx-code-alt'></i>
-                        <h2>Data Science & ML</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam perspiciatis fugit debitis laudantium, sed numquam neque at, praesentium exercitationem culpa ipsam? Nihil.
-                        </p>
-                        <a href="#" class="read">Learn More</a>
-                    </div>
-                    <div>
-                        <i class='bx bxl-java' style='color:#00eeff'></i>
-                        <h2>Java</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam perspiciatis fugit debitis laudantium, sed numquam neque at, praesentium exercitationem culpa ipsam? Nihil.
-                        </p>
-                        <a href="#" class="read">Learn More</a>
-                    </div>
-                    <div>
-                        <i class='bx bxl-react' style='color:#00eeff'></i>
-                        <h2>Web Development</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam perspiciatis fugit debitis laudantium, sed numquam neque at, praesentium exercitationem culpa ipsam? Nihil.
-                        </p>
-                        <a href="#" class="read">Learn More</a>
-                    </div>
+            <div class="home-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="100">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="4">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="50">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Happy Clients</span>
                 </div>
             </div>
+            <div class="home-actions">
+                <a href="#projects" class="btn-primary">View My Work</a>
+                <a href="#contact" class="btn-outline">Let's Talk</a>
+            </div>
+            <div class="home-socials">
+                <a href="https://github.com/azharali0" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                <a href="https://www.linkedin.com/in/azhar-ali-ibaian/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://www.upwork.com/freelancers/~01a11c746d380107f9" target="_blank" rel="noopener" aria-label="Upwork"><i class="bx bxl-upwork"></i></a>
+                <a href="https://www.fiverr.com/azharde" target="_blank" rel="noopener" aria-label="Fiverr"><i class="bx bx-briefcase"></i></a>
+                <a href="https://leetcode.com/imazhar/" target="_blank" rel="noopener" aria-label="LeetCode"><i class="bx bx-code-alt"></i></a>
+            </div>
+        </div>
+        <div class="home-image-wrapper reveal-right">
+            <div class="home-image-glow"></div>
+            <img src="./images/Home.png" alt="Azhar Ali" class="home-image home-image-lg">
         </div>
     </section>
 
-    <h1 class="sub-title">My <span>Skills</span></h1>
-
-    <section>
-        <div class="container1" id="skills">
-            
-            <h1 class="heading1">Technical Skills</h1>
-            <div class="Technical-bars">
-                <div class="bar"><i style="color: #c95d2e" class='bx bxl-html5'></i>
-                    <div class="info">
-                        <span>Java</span>
-                    </div>
-                    <div class="progress-line html">
-                        <span></span>
-                    </div>
-                </div><br/>
-                <div class="bar"><i style="color: #147bbc" class='bx bxl-css3'></i>
-                    <div class="info">
-                        <span>Python</span>
-                    </div>
-                    <div class="progress-line css">
-                        <span></span>
-                    </div>
-                </div><br/>
-                <div class="bar"><i style="color: #b0bc1e" class='bx bxl-javascript'></i>
-                    <div class="info">
-                        <span>UI/UX Design</span>
-                    </div>
-                    <div class="progress-line javaScript">
-                        <span></span>
-                    </div>
-                </div><br/>
-                <div class="bar"><i style="color: #c32ec9" class='bx bxl-java'></i>
-                    <div class="info">
-                        <span>Mathematics</span>
-                    </div>
-                    <div class="progress-line java">
-                        <span></span>
-                    </div>
-                </div><br/>
-                <div class="bar"><i style="color: #69bcbc" class='bx bxl-react'></i>
-                    <div class="info">
-                        <span>React</span>
-                    </div>
-                    <div class="progress-line react">
-                        <span> </span>
-                    </div>
-                </div>
-            </div>
+    <!-- ==================== ABOUT ==================== -->
+    <section class="about" id="about">
+        <div class="about-img reveal-left">
+            <div class="about-img-border"></div>
+            <img src="./images/About.png" alt="Azhar Ali Avatar">
         </div>
-
-        <div class="container1">
-            <h1 class="heading1">Professional Skills</h1>
-            <div class="radial-bars">
-
-             <div class="radial-bar">
-                <svg x="0px" y="0px" viewBox="0 0 200 200">
-                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                </svg>
-                <div class="percentage">95%</div>
-                <div class="text">Creativity</div>
-             </div>
-
-             <div class="radial-bar">
-                <svg x="0px" y="0px" viewBox="0 0 200 200">
-                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                    <circle class="path path-2" cx="100" cy="100" r="80"></circle>
-                </svg>
-                <div class="percentage">87%</div>
-                <div class="text">Communication</div>
-             </div>
-
-             <div class="radial-bar">
-                <svg x="0px" y="0px" viewBox="0 0 200 200">
-                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                    <circle class="path path-3" cx="100" cy="100" r="80"></circle>
-                </svg>
-                <div class="percentage">85%</div>
-                <div class="text">Problem Solving</div>
-             </div>
-
-             <div class="radial-bar">
-                <svg x="0px" y="0px" viewBox="0 0 200 200">
-                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                    <circle class="path path-4" cx="100" cy="100" r="80"></circle>
-                </svg>
-                <div class="percentage">85%</div>
-                <div class="text">TeamWork</div>
-             </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="portfolio" id="project">
-            <div class="main-text" id="project">
-                <h2>Latest <span>Project</span></h2>
-                
-                <div class="portfolio-content">
-                    <div class="row">
-                        <img src="./images/Project1.png">
-                        <div class="layer">
-                            <h5>Weather App</h5>
-                            <p>The Weather Detection project is designed to 
-                               provide real-time weather information based 
-                               on user inputs such as location or city name.
-                               It utilizes APIs (Application Programming Interfaces)
-                               provided by weather services to fetch and display 
-                               current weather conditions and forecasts.
-                            </p>
-                            <a href="#"><i class='bx bx-link-external' style="color: aliceblue;"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <img src="./images/Drowsiness-Sight-Detection.png">
-                        <div class="layer">
-                            <h5>Driver-Drowsiness-Detection</h5>
-                            <p>Drowsiness detection using OpenCV involves monitoring a person's
-                                 eye movements and blink rate in real-time via a camera, identifying 
-                                 signs of fatigue such as prolonged eye closure or slow blinking to alert
-                                  the individual. This is typically achieved through techniques like eye aspect
-                                   ratio (EAR) calculation and facial landmark detection.
-                            </p>
-                            <a href="#"><i class='bx bx-link-external' style="color: aliceblue;"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <img src="./images/Project3.png">
-                        <div class="layer">
-                            <h5>Customer Relationship Management (CRM) System</h5>
-                            <p>Cutting-edge CRM system powered by Spring Boot, designed for seamless customer 
-                                interaction management, comprehensive data organization, and scalable business insights.
-                            </p>
-                            <a href="#"><i class='bx bx-link-external' style="color: aliceblue;"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="contact-text">
-            <h2>Contact <span>Me</span></h2>
-            <h4>Let's Work Together</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Iste similique quibusdam facere!
+        <div class="about-text reveal">
+            <h2>About <span>Me</span></h2>
+            <h4>AI/ML Engineer & Agentic AI Specialist</h4>
+            <p>
+                I'm Azhar Ali, a Computer Science graduate from <strong>Sukkur IBA University</strong> (GPA: 3.5/4.0)
+                with a deep passion for Artificial Intelligence. I specialize in building <strong>autonomous AI agents</strong>
+                using LangChain/LangGraph, implementing <strong>RAG systems</strong> with vector databases, and developing
+                production-grade ML models for Computer Vision and NLP.
             </p>
-            <div class="contact-list">
-                <li><i class='bx bxs-send'></i>prog.azharexp@gmail.com</li>
-                <li><i class='bx bx-phone'></i>+923128602418</li>
+            <p>
+                With <strong>4+ years of freelance experience</strong> on platforms like Kwork, Fiverr, and Upwork,
+                I've delivered <strong>100+ AI/ML projects</strong> achieving a <strong>98% client satisfaction rate</strong>.
+                I've architected multi-agent systems, built RAG pipelines processing 100K+ documents,
+                and deployed edge AI models achieving 30 FPS on embedded devices.
+            </p>
+            <div class="about-tags">
+                <span class="tag">Agentic AI</span>
+                <span class="tag">LangChain</span>
+                <span class="tag">PyTorch</span>
+                <span class="tag">Computer Vision</span>
+                <span class="tag">NLP</span>
+                <span class="tag">RAG Systems</span>
+                <span class="tag">LLMs</span>
+                <span class="tag">Full-Stack</span>
             </div>
-            <div class="contact-icons">
-                <a href=""><i class='bx bxl-facebook-circle'></i></a>
-                <a href=""><i class='bx bxl-twitter'></i></a>
-                <a href=""><i class='bx bxl-instagram'></i></a>
-                <a href="https://www.linkedin.com/in/azhar-ali-ibaian/"><i class='bx bxl-linkedin'></i></a>
-            </div>
+            <a href="mailto:prog.azharexp@gmail.com" class="btn-primary">Get In Touch</a>
         </div>
-
-        <div class="contact-form">
-            <form action="">
-                <input type="text" placeholder="Enter Your Name" required>
-                <input type="email" placeholder="Enter Your Email" required>
-
-                <input type="" placeholder="Enter Your Subject">
-
-                <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
-
-                <input type="submit" value="submit" class="send">
-            </form>
-        </div>
-
     </section>
-    <div class="last-text">
-        <p>AZHAR ALI</p>
-    </div>
-    <a href="#" class="top"><i class='bx bx-up-arrow-alt'></i></a>
 
+    <!-- ==================== SKILLS ==================== -->
+    <section class="skills-section" id="skills">
+        <h2 class="section-title reveal">My <span>Skills</span></h2>
+        <p class="section-subtitle reveal">Technologies and tools I work with</p>
 
+        <div class="skills-grid">
+            <!-- Skill Card 1 -->
+            <div class="skill-card reveal">
+                <div class="skill-card-icon">
+                    <i class="bx bx-brain"></i>
+                </div>
+                <h3>Agentic AI & LLMs</h3>
+                <p>LangChain, LangGraph, AutoGPT, Multi-Agent Systems, Agent Orchestration, Tool Use, OpenAI API, Claude API, Hugging Face Transformers</p>
+                <div class="skill-card-glow"></div>
+            </div>
+            <!-- Skill Card 2 -->
+            <div class="skill-card reveal">
+                <div class="skill-card-icon">
+                    <i class="bx bx-scatter-chart"></i>
+                </div>
+                <h3>Deep Learning & CV</h3>
+                <p>PyTorch, TensorFlow, Keras, OpenCV, YOLO, ResNet, EfficientNet, Object Detection, Image Classification, Facial Recognition</p>
+                <div class="skill-card-glow"></div>
+            </div>
+            <!-- Skill Card 3 -->
+            <div class="skill-card reveal">
+                <div class="skill-card-icon">
+                    <i class="bx bx-data"></i>
+                </div>
+                <h3>RAG & Vector DBs</h3>
+                <p>FAISS, ChromaDB, Pinecone, Weaviate, Semantic Search, Embeddings, Vector Indexing, Document Retrieval Pipelines</p>
+                <div class="skill-card-glow"></div>
+            </div>
+            <!-- Skill Card 4 -->
+            <div class="skill-card reveal">
+                <div class="skill-card-icon">
+                    <i class="bx bx-message-square-dots"></i>
+                </div>
+                <h3>NLP & Transformers</h3>
+                <p>BERT, GPT, Transformers, Sentiment Analysis, Named Entity Recognition, Text Generation, Tokenization, Fine-tuning</p>
+                <div class="skill-card-glow"></div>
+            </div>
+            <!-- Skill Card 5 -->
+            <div class="skill-card reveal">
+                <div class="skill-card-icon">
+                    <i class="bx bx-cloud"></i>
+                </div>
+                <h3>Cloud & Deployment</h3>
+                <p>AWS SageMaker, Google Cloud AI, Docker, Kubernetes, FastAPI, Flask, MLflow, Weights & Biases, TensorBoard</p>
+                <div class="skill-card-glow"></div>
+            </div>
+            <!-- Skill Card 6 -->
+            <div class="skill-card reveal">
+                <div class="skill-card-icon">
+                    <i class="bx bx-code-block"></i>
+                </div>
+                <h3>Full-Stack Dev</h3>
+                <p>React, Node.js, Express.js, Next.js, Spring Boot, MongoDB, PostgreSQL, REST APIs, HTML/CSS/JS, Flutter</p>
+                <div class="skill-card-glow"></div>
+            </div>
+        </div>
 
+        <!-- Technical Proficiency Bars -->
+        <div class="proficiency-section reveal">
+            <h3 class="proficiency-title">Technical Proficiency</h3>
+            <div class="proficiency-grid">
+                <div class="proficiency-item">
+                    <div class="proficiency-info">
+                        <span>Python</span><span>95%</span>
+                    </div>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" data-width="95"></div>
+                    </div>
+                </div>
+                <div class="proficiency-item">
+                    <div class="proficiency-info">
+                        <span>PyTorch / TensorFlow</span><span>90%</span>
+                    </div>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" data-width="90"></div>
+                    </div>
+                </div>
+                <div class="proficiency-item">
+                    <div class="proficiency-info">
+                        <span>LangChain / LangGraph</span><span>88%</span>
+                    </div>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" data-width="88"></div>
+                    </div>
+                </div>
+                <div class="proficiency-item">
+                    <div class="proficiency-info">
+                        <span>Computer Vision (OpenCV, YOLO)</span><span>92%</span>
+                    </div>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" data-width="92"></div>
+                    </div>
+                </div>
+                <div class="proficiency-item">
+                    <div class="proficiency-info">
+                        <span>NLP (BERT, GPT, Transformers)</span><span>88%</span>
+                    </div>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" data-width="88"></div>
+                    </div>
+                </div>
+                <div class="proficiency-item">
+                    <div class="proficiency-info">
+                        <span>React / Node.js / Full-Stack</span><span>85%</span>
+                    </div>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" data-width="85"></div>
+                    </div>
+                </div>
+                <div class="proficiency-item">
+                    <div class="proficiency-info">
+                        <span>Docker / Cloud (AWS, GCP)</span><span>80%</span>
+                    </div>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" data-width="80"></div>
+                    </div>
+                </div>
+                <div class="proficiency-item">
+                    <div class="proficiency-info">
+                        <span>C++ / Java</span><span>82%</span>
+                    </div>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" data-width="82"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- ==================== EXPERIENCE ==================== -->
+    <section class="experience-section" id="experience">
+        <h2 class="section-title reveal">My <span>Experience</span></h2>
+        <p class="section-subtitle reveal">Professional journey & achievements</p>
 
+        <div class="timeline reveal">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>AI/ML Engineer (Freelance)</h3>
+                        <span class="timeline-date">April 2021 — Present</span>
+                    </div>
+                    <span class="timeline-company">Kwork · Fiverr · Upwork</span>
+                    <ul>
+                        <li>Architected <strong>autonomous AI agents</strong> using LangChain/LangGraph for multi-step reasoning — 40% efficiency gain</li>
+                        <li>Built <strong>RAG pipelines</strong> with FAISS, ChromaDB, Pinecone — 85% accuracy on 100K+ document corpus, sub-second response</li>
+                        <li>Developed <strong>Computer Vision models</strong> (PyTorch) for drowsiness detection — 96% accuracy, &lt;100ms latency, 30 FPS on edge</li>
+                        <li>Created <strong>NLP models</strong> (BERT, RoBERTa) for sentiment analysis — 94% accuracy processing 1K+ posts daily</li>
+                        <li>Delivered <strong>100+ projects</strong> with 98% client satisfaction across CV, NLP, recommendation systems & predictive analytics</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Bachelor of Science in Computer Science</h3>
+                        <span class="timeline-date">Oct 2021 — Dec 2025</span>
+                    </div>
+                    <span class="timeline-company">Sukkur IBA University · GPA: 3.5/4.0</span>
+                    <ul>
+                        <li><strong>Coursework:</strong> Machine Learning, Deep Learning, AI, Computer Vision, NLP</li>
+                        <li><strong>Research:</strong> Agentic AI, LLMs, Multi-Agent Systems, RAG Architectures</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
+        <!-- Achievements -->
+        <div class="achievements reveal">
+            <h3 class="proficiency-title">Achievements & Certifications</h3>
+            <div class="achievement-grid">
+                <div class="achievement-card">
+                    <i class="bx bx-trophy"></i>
+                    <h4>Top Rated Freelancer</h4>
+                    <p>4+ years, 50+ projects, consistent 5-star ratings on Kwork</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="bx bx-certification"></i>
+                    <h4>ML Specialization</h4>
+                    <p>Machine Learning, Deep Learning & Advanced CV Certifications</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="bx bx-edit"></i>
+                    <h4>Technical Writer</h4>
+                    <p>Published content on Agentic AI & LangGraph reaching 1000+ developers</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="bx bx-git-branch"></i>
+                    <h4>Open Source</h4>
+                    <p>32 public repositories on GitHub — CAL.com contributor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section class="projects-section" id="projects">
+        <h2 class="section-title reveal">Featured <span>Projects</span></h2>
+        <p class="section-subtitle reveal">Showcasing AI/ML solutions that solve real problems</p>
+
+        <!-- Project Filter -->
+        <div class="project-filters reveal">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ai">Agentic AI</button>
+            <button class="filter-btn" data-filter="cv">Computer Vision</button>
+            <button class="filter-btn" data-filter="nlp">NLP</button>
+            <button class="filter-btn" data-filter="ml">ML Systems</button>
+            <button class="filter-btn" data-filter="web">Web / Mobile</button>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card reveal" data-category="ai">
+                <div class="project-image">
+                    <img src="./images/project_rag_agent.png" alt="Autonomous Research Agent with RAG">
+                    <div class="project-overlay">
+                        <a href="https://github.com/azharali0" target="_blank" class="project-link"><i class="bx bxl-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span>LangGraph</span><span>OpenAI</span><span>FAISS</span><span>ChromaDB</span>
+                    </div>
+                    <h3>Autonomous Research Agent with RAG</h3>
+                    <p>Multi-agent system with LangGraph for autonomous research achieving 85% accuracy. Semantic search with FAISS on 100K+ docs with sub-second response. Agent workflows with state management and self-reflection.</p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card reveal" data-category="ai">
+                <div class="project-image">
+                    <img src="./images/project_ai_assistant.png" alt="AI Portfolio Assistant">
+                    <div class="project-overlay">
+                        <a href="https://github.com/azharali0" target="_blank" class="project-link"><i class="bx bxl-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span>LangChain</span><span>Claude API</span><span>Express.js</span>
+                    </div>
+                    <h3>AI Portfolio Assistant (Production)</h3>
+                    <p>Conversational AI with multi-turn context using Claude Sonnet 4. Fallback system with 99.9% uptime serving 500+ monthly visitors. Built with LangChain for context-aware responses.</p>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card reveal" data-category="nlp">
+                <div class="project-image">
+                    <img src="./images/project_sentiment.png" alt="Sentiment Analysis System">
+                    <div class="project-overlay">
+                        <a href="https://github.com/azharali0" target="_blank" class="project-link"><i class="bx bxl-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span>PyTorch</span><span>BERT</span><span>Transformers</span><span>Docker</span>
+                    </div>
+                    <h3>Sentiment Analysis System</h3>
+                    <p>Fine-tuned BERT achieving 94% accuracy. Scalable pipeline processing 1K+ posts daily with &lt;200ms latency. ONNX optimization for production. Real-time dashboard for monitoring.</p>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card reveal" data-category="cv">
+                <div class="project-image">
+                    <img src="./images/project_drowsiness.png" alt="Drowsiness Detection System">
+                    <div class="project-overlay">
+                        <a href="https://github.com/azharali0" target="_blank" class="project-link"><i class="bx bxl-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span>PyTorch</span><span>OpenCV</span><span>CNNs</span><span>Edge AI</span>
+                    </div>
+                    <h3>Drowsiness Detection System</h3>
+                    <p>CNN with facial landmarks achieving 96% accuracy. EAR/MAR features for reliable detection. Edge deployment on Raspberry Pi with quantization achieving 30 FPS and &lt;100ms latency.</p>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card reveal" data-category="cv">
+                <div class="project-image">
+                    <img src="./images/project_transfer_learning.png" alt="Transfer Learning Image Classification">
+                    <div class="project-overlay">
+                        <a href="https://github.com/azharali0" target="_blank" class="project-link"><i class="bx bxl-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span>TensorFlow</span><span>ResNet</span><span>EfficientNet</span>
+                    </div>
+                    <h3>Transfer Learning Image Classification</h3>
+                    <p>ResNet-50 / EfficientNet achieving 94% accuracy on 5K images. Data augmentation, mixed precision training. Deployed with TensorFlow Serving REST API for production inference.</p>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-card reveal" data-category="ml">
+                <div class="project-image">
+                    <img src="./images/project_recommendation.png" alt="E-commerce Recommendation System">
+                    <div class="project-overlay">
+                        <a href="https://github.com/azharali0" target="_blank" class="project-link"><i class="bx bxl-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span>Python</span><span>SVD</span><span>Collaborative Filtering</span>
+                    </div>
+                    <h3>E-commerce Recommendation System</h3>
+                    <p>Hybrid recommendation engine combining Item-Based Collaborative Filtering and SVD Matrix Factorization. Cold-start handling, explainability module, and Gradio web interface.</p>
+                </div>
+            </div>
+
+            <!-- Project 7 - Temple Clock -->
+            <div class="project-card reveal" data-category="web">
+                <div class="project-image">
+                    <img src="./images/Project3.png" alt="Temple Clock - Staff Management">
+                    <div class="project-overlay">
+                        <a href="https://github.com/azharali0/CRM-TempO-Project" target="_blank" class="project-link"><i class="bx bxl-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span>Flutter</span><span>Node.js</span><span>Dart</span><span>Netlify</span>
+                    </div>
+                    <h3>Temple Clock — Staff Management Platform</h3>
+                    <p>Cross-platform staff management system built with Flutter &amp; Node.js. Features QR-based clock-in/out, real-time attendance tracking, rota scheduling, and role-based admin/staff dashboards. Deployed on Netlify &amp; Render.</p>
+                </div>
+            </div>
+
+            <!-- Project 8 - CRM Web Dev -->
+            <div class="project-card reveal" data-category="web">
+                <div class="project-image">
+                    <img src="./images/Project1.png" alt="CRM System - Spring Boot">
+                    <div class="project-overlay">
+                        <a href="https://github.com/azharali0/CRM-By-Java-Spring-Boot" target="_blank" class="project-link"><i class="bx bxl-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span>Spring Boot</span><span>Java</span><span>React</span><span>PostgreSQL</span>
+                    </div>
+                    <h3>CRM System — Full-Stack Web App</h3>
+                    <p>Enterprise Customer Relationship Management system built with Spring Boot backend and React frontend. Features customer data management, interaction tracking, analytics dashboards, and scalable REST API architecture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="contact-section" id="contact">
+        <h2 class="section-title reveal">Get In <span>Touch</span></h2>
+        <p class="section-subtitle reveal">Let's work together to build something amazing</p>
+
+        <div class="contact-wrapper">
+            <div class="contact-info reveal-left">
+                <h3>Let's Talk</h3>
+                <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether it's building an AI agent, training an ML model, or developing a full-stack application — let's connect!</p>
+                <div class="contact-details">
+                    <div class="contact-detail-item">
+                        <i class="bx bxs-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:prog.azharexp@gmail.com">prog.azharexp@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <i class="bx bxs-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+923083795559">+92-308-3795559</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <i class="bx bxs-map"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <span>Sukkur, Sindh, Pakistan</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-socials">
+                    <a href="https://github.com/azharali0" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                    <a href="https://www.linkedin.com/in/azhar-ali-ibaian/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://www.upwork.com/freelancers/~01a11c746d380107f9" target="_blank" rel="noopener" aria-label="Upwork"><i class="bx bxl-upwork"></i></a>
+                    <a href="https://www.fiverr.com/azharde" target="_blank" rel="noopener" aria-label="Fiverr"><i class="bx bx-briefcase"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form reveal">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder=" " required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder=" " required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" placeholder=" ">
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="6" placeholder=" " required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn-primary btn-submit">
+                        <span>Send Message</span>
+                        <i class="bx bx-send"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Azhar Ali. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/azharali0" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/azhar-ali-ibaian/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://www.upwork.com/freelancers/~01a11c746d380107f9" target="_blank" rel="noopener">Upwork</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top -->
+    <a href="#home" class="scroll-top" id="scroll-top"><i class="bx bx-up-arrow-alt"></i></a>
 
     <script src="main.js"></script>
 </body>
