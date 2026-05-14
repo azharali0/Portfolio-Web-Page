@@ -13,75 +13,39 @@ new Typed(".typed-text", {
   loop: true
 });
 
-/* ==================== PARTICLES BACKGROUND ==================== */
+/* ==================== 3D VANTA.JS BACKGROUND ==================== */
+document.addEventListener("DOMContentLoaded", () => {
+  if (typeof VANTA !== "undefined") {
+    VANTA.NET({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x00e5ff,
+      backgroundColor: 0x0a0f1a,
+      points: 15.00,
+      maxDistance: 22.00,
+      spacing: 16.00,
+      showDots: true
+    });
+  }
+});
+
+/* ==================== 3D PARALLAX HERO TEXT ==================== */
 (function () {
-  const canvas = document.getElementById("particles-canvas");
-  const ctx = canvas.getContext("2d");
-  let particles = [];
-  let w, h;
-
-  function resize() {
-    w = canvas.width = window.innerWidth;
-    h = canvas.height = window.innerHeight;
-  }
-  resize();
-  window.addEventListener("resize", resize);
-
-  function createParticles() {
-    particles = [];
-    const count = Math.min(Math.floor((w * h) / 12000), 120);
-    for (let i = 0; i < count; i++) {
-      particles.push({
-        x: Math.random() * w,
-        y: Math.random() * h,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
-        r: Math.random() * 2 + 0.5,
-        o: Math.random() * 0.5 + 0.1
-      });
-    }
-  }
-  createParticles();
-
-  function draw() {
-    ctx.clearRect(0, 0, w, h);
-    for (let i = 0; i < particles.length; i++) {
-      const p = particles[i];
-      p.x += p.vx;
-      p.y += p.vy;
-      if (p.x < 0) p.x = w;
-      if (p.x > w) p.x = 0;
-      if (p.y < 0) p.y = h;
-      if (p.y > h) p.y = 0;
-
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(0, 229, 255, ${p.o})`;
-      ctx.fill();
-
-      // Draw connections
-      for (let j = i + 1; j < particles.length; j++) {
-        const p2 = particles[j];
-        const dx = p.x - p2.x;
-        const dy = p.y - p2.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 140) {
-          ctx.beginPath();
-          ctx.moveTo(p.x, p.y);
-          ctx.lineTo(p2.x, p2.y);
-          ctx.strokeStyle = `rgba(0, 229, 255, ${0.08 * (1 - dist / 140)})`;
-          ctx.lineWidth = 0.6;
-          ctx.stroke();
-        }
-      }
-    }
-    requestAnimationFrame(draw);
-  }
-  draw();
-  window.addEventListener("resize", createParticles);
+  const homeContent = document.querySelector(".home-content");
+  if (!homeContent) return;
+  document.addEventListener("mousemove", (e) => {
+    // Parallax effect based on mouse position relative to window center
+    const x = (window.innerWidth / 2 - e.pageX) / 40;
+    const y = (window.innerHeight / 2 - e.pageY) / 40;
+    homeContent.style.transform = `perspective(1000px) rotateY(${-x}deg) rotateX(${y}deg)`;
+  });
 })();
-
-
 
 /* ==================== HEADER SCROLL EFFECT ==================== */
 (function () {
