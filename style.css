@@ -8,7 +8,7 @@
   --gradient:linear-gradient(135deg,#00e5ff,#7c3aed);
   --font:'Inter',sans-serif;--font2:'Outfit',sans-serif;
 }
-body{font-family:var(--font);color:var(--text);background:var(--bg);overflow-x:hidden;cursor:none}
+body{font-family:var(--font);color:var(--text);background:var(--bg);overflow-x:hidden}
 html{font-size:16px}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
@@ -17,10 +17,7 @@ strong{color:var(--accent)}
 /* ==================== PARTICLES ==================== */
 #particles-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
 
-/* ==================== CUSTOM CURSOR ==================== */
-.cursor-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transition:transform .15s}
-.cursor-outline{width:36px;height:36px;border:2px solid rgba(0,229,255,.4);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transition:transform .08s;transform:translate(-50%,-50%)}
-body:hover .cursor-outline{border-color:rgba(0,229,255,.5)}
+
 
 /* ==================== HEADER ==================== */
 .header{position:fixed;top:0;left:0;width:100%;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;z-index:1000;transition:all .4s;backdrop-filter:blur(0)}
@@ -235,8 +232,7 @@ body:hover .cursor-outline{border-color:rgba(0,229,255,.5)}
   .timeline::before{left:8px}
   .timeline-dot{left:-28px}
   .footer-content{flex-direction:column;gap:16px;text-align:center}
-  body{cursor:auto}
-  .cursor-dot,.cursor-outline{display:none}
+
 }
 @media(max-width:480px){
   .home{padding:100px 5% 60px}

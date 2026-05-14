@@ -81,43 +81,7 @@ new Typed(".typed-text", {
   window.addEventListener("resize", createParticles);
 })();
 
-/* ==================== CUSTOM CURSOR ==================== */
-(function () {
-  const dot = document.querySelector(".cursor-dot");
-  const outline = document.querySelector(".cursor-outline");
-  if (!dot || !outline) return;
-  let mx = 0, my = 0, ox = 0, oy = 0;
 
-  window.addEventListener("mousemove", (e) => {
-    mx = e.clientX;
-    my = e.clientY;
-    dot.style.left = mx - 4 + "px";
-    dot.style.top = my - 4 + "px";
-  });
-
-  function animateOutline() {
-    ox += (mx - ox) * 0.12;
-    oy += (my - oy) * 0.12;
-    outline.style.left = ox + "px";
-    outline.style.top = oy + "px";
-    requestAnimationFrame(animateOutline);
-  }
-  animateOutline();
-
-  // Hover expand effect
-  document.querySelectorAll("a, button, .filter-btn, .project-card").forEach(el => {
-    el.addEventListener("mouseenter", () => {
-      dot.style.transform = "scale(2)";
-      outline.style.transform = "translate(-50%,-50%) scale(1.8)";
-      outline.style.borderColor = "rgba(0,229,255,0.8)";
-    });
-    el.addEventListener("mouseleave", () => {
-      dot.style.transform = "scale(1)";
-      outline.style.transform = "translate(-50%,-50%) scale(1)";
-      outline.style.borderColor = "rgba(0,229,255,0.4)";
-    });
-  });
-})();
 
 /* ==================== HEADER SCROLL EFFECT ==================== */
 (function () {
