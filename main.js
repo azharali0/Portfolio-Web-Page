@@ -40,10 +40,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const homeContent = document.querySelector(".home-content");
   if (!homeContent) return;
   document.addEventListener("mousemove", (e) => {
-    // Parallax effect based on mouse position relative to window center
-    const x = (window.innerWidth / 2 - e.pageX) / 40;
-    const y = (window.innerHeight / 2 - e.pageY) / 40;
-    homeContent.style.transform = `perspective(1000px) rotateY(${-x}deg) rotateX(${y}deg)`;
+    // Subtle parallax effect that follows the mouse naturally
+    let x = (window.innerWidth / 2 - e.pageX) / 60;
+    let y = (window.innerHeight / 2 - e.pageY) / 60;
+    
+    // Prevent the text from flipping over by limiting the maximum rotation
+    x = Math.max(-15, Math.min(15, x));
+    y = Math.max(-15, Math.min(15, y));
+    
+    homeContent.style.transform = `perspective(1000px) rotateY(${x}deg) rotateX(${y}deg)`;
   });
 })();
 
