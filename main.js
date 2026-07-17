@@ -1,11 +1,11 @@
 /* ==================== TYPED.JS ==================== */
 new Typed(".typed-text", {
   strings: [
-    "AI/ML Engineer",
-    "Agentic AI Specialist",
-    "Deep Learning Expert",
-    "Computer Vision Engineer",
-    "Full-Stack Developer"
+    "Full Stack Developer",
+    "MERN Stack Engineer",
+    "AI Integration Specialist",
+    "DevOps Enthusiast",
+    "React & Node.js Engineer"
   ],
   typeSpeed: 50,
   backSpeed: 30,
